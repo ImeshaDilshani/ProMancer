@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const getListProjects = () => async (dispatch) => {
     try {
-        dispatch({ type: 'GET_ssPROJECT_REQUEST' });
+        dispatch({ type: 'GET_PROJECT_REQUEST' });
 
         const { data } = await axios.get('http://127.0.0.1:8000/api/');
 
