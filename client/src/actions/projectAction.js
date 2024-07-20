@@ -37,3 +37,22 @@ export const addProjects = (projectData) => async (dispatch) => {
         });
     }
 }
+
+// projectAction.js
+export const getDetailProjects = (id) => async (dispatch) => {
+    try {
+        dispatch({ type: 'DETAIL_PROJECT_REQUEST' });
+
+        const { data } = await axios.get(`http://127.0.0.1:8000/api/${id}`);
+
+        dispatch({
+            type: 'DETAIL_PROJECT_SUCCESS',
+            payload: data
+        });
+    } catch (error) {
+        dispatch({
+            type: 'DETAIL_PROJECT_FAIL',
+            payload: error.response && error.response.data.message
+        });
+    }
+}
