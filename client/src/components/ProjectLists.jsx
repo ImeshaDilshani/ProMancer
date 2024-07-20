@@ -33,7 +33,7 @@ const ProjectLists = () => {
                 </Card.Body>
                 <Card.Footer>
                   <Button variant="info" className="me-2" href={project.demo} target="_blank" rel="noreferrer">Demo</Button>
-                  <Link to={`/project/${project.id}`} className="btn btn-success">View Details</Link>
+                  <Link to={'/detail-project/'+project.id} className="btn btn-success">View Details</Link>
                 </Card.Footer>
               </Card>
             </Col>
