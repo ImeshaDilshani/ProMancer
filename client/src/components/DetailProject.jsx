@@ -10,7 +10,7 @@ const DetailProject = () => {
     const dispatch = useDispatch();
     const projectDetail = useSelector(state => state.DetailProject);
 
-    const { loading, error, project, success } = projectDetail;
+    const { loading, error, project } = projectDetail;
 
     useEffect(() => {
         dispatch(getDetailProjects(id));
